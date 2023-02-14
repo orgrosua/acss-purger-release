@@ -31,6 +31,9 @@ final class Frontpage
         if ($is_inside_editor) {
             return;
         }
+        if (!\file_exists(CoreCache::get_cache_path())) {
+            return;
+        }
         $finder = new Finder();
         $finder->files()->in(CoreCache::get_cache_path())->name('*.css');
         $cache_files = \iterator_to_array($finder);

@@ -11,7 +11,7 @@
 declare (strict_types=1);
 namespace Yabe\AcssPurger\Core;
 
-use _YabeAcssPurger\Automatic_CSS\Model\Config\Classes;
+use Automatic_CSS\Model\Config\Classes;
 use _YabeAcssPurger\Sabberworm\CSS\CSSList\CSSList;
 use _YabeAcssPurger\Sabberworm\CSS\CSSList\Document;
 use _YabeAcssPurger\Sabberworm\CSS\Parser;
@@ -60,6 +60,9 @@ class Cache
     public function build_cache()
     {
         $acss_plugin_info = \get_plugin_data(\ACSS_PLUGIN_FILE);
+        if (!\file_exists(\ACSS_DYNAMIC_CSS_DIR)) {
+            return;
+        }
         $finder = new Finder();
         $finder->files()->in(\ACSS_DYNAMIC_CSS_DIR)->name('*.css');
         $classes = (new Classes())->load();
