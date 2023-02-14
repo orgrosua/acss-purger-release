@@ -56,7 +56,7 @@ class Bricks
     public function scan_contents($selectors)
     {
         $posts = [];
-        $post_types = \_YabeAcssPurger\Bricks\Database::$global_settings['postTypes'] ?? [];
+        $post_types = \Bricks\Database::$global_settings['postTypes'] ?? [];
         $post_types[] = \BRICKS_DB_TEMPLATE_SLUG;
         $wpQuery = new WP_Query(['posts_per_page' => -1, 'fields' => 'ids', 'post_type' => $post_types, 'meta_query' => ['relation' => 'OR', ['key' => \BRICKS_DB_PAGE_HEADER], ['key' => \BRICKS_DB_PAGE_CONTENT], ['key' => \BRICKS_DB_PAGE_FOOTER]]]);
         foreach ($wpQuery->posts as $post_id) {
