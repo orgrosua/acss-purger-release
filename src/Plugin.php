@@ -28,15 +28,15 @@ final class Plugin
     /**
      * @var string
      */
-    public const VERSION = '0.0.3-DEV';
+    public const VERSION = '1.0.0';
     /**
      * @var int
      */
-    public const VERSION_ID = 03;
+    public const VERSION_ID = 10000;
     /**
      * @var int
      */
-    public const MAJOR_VERSION = 0;
+    public const MAJOR_VERSION = 1;
     /**
      * @var int
      */
@@ -44,11 +44,11 @@ final class Plugin
     /**
      * @var int
      */
-    public const RELEASE_VERSION = 3;
+    public const RELEASE_VERSION = 0;
     /**
      * @var string
      */
-    public const EXTRA_VERSION = 'DEV';
+    public const EXTRA_VERSION = '';
     /**
      * Easy Digital Downloads Software Licensing integration wrapper.
      *
