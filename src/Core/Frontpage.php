@@ -27,6 +27,10 @@ final class Frontpage
     public function enqueue_css_cache()
     {
         global $wp_styles;
+        // only serve the original css file to admin
+        if (\current_user_can('manage_options')) {
+            return;
+        }
         $is_inside_editor = \apply_filters('f!yabe/acsspurger/core/runtime:is_inside_editor', \false);
         if ($is_inside_editor) {
             return;

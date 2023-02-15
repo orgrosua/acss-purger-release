@@ -34,7 +34,7 @@ class Cache extends AbstractApi implements ApiInterface
     }
     public function index(WP_REST_Request $wprestRequest) : WP_REST_Response
     {
-        $cache = ['pending_task' => \false, 'last_generated' => ''];
+        $cache = ['pending_task' => \wp_next_scheduled('a!yabe/acsspurger/core/cache:build_cache'), 'last_generated' => ''];
         $files = ['original' => [], 'purged' => []];
         if (\file_exists(\ACSS_DYNAMIC_CSS_DIR)) {
             $finder = new Finder();
@@ -49,9 +49,6 @@ class Cache extends AbstractApi implements ApiInterface
             foreach ($finder as $f) {
                 $files['purged'][] = ['name' => $f->getFilename(), 'size' => $f->getSize(), 'last_modified' => $f->getMTime(), 'file_url' => CoreCache::get_cache_url($f->getFilename())];
             }
-        }
-        if (\wp_next_scheduled('a!yabe/acsspurger/core/cache:build_cache')) {
-            $cache['pending_task'] = \true;
         }
         return new WP_REST_Response(['cache' => $cache, 'files' => $files]);
     }
