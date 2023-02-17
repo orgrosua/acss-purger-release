@@ -11,6 +11,7 @@
 declare (strict_types=1);
 namespace Yabe\AcssPurger\Api\Setting;
 
+use Automatic_CSS\Model\Config\Classes;
 use WP_REST_Request;
 use WP_REST_Response;
 use WP_REST_Server;
@@ -34,7 +35,8 @@ class Option extends AbstractApi implements ApiInterface
     {
         $options = \json_decode(\get_option(\ACSS_PURGER_OPTION_NAMESPACE . '_options', '{}'), null, 512, \JSON_THROW_ON_ERROR);
         $options = \apply_filters('f!yabe/acsspurger/api/setting/option:index_options', $options);
-        return new WP_REST_Response(['options' => $options]);
+        $acss_classes = (new Classes())->load();
+        return new WP_REST_Response(['options' => $options, 'acss_classes' => $acss_classes]);
     }
     public function store(WP_REST_Request $wprestRequest) : WP_REST_Response
     {
