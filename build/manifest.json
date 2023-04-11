@@ -1,6 +1,8 @@
 {
   "build/app.css": "/build/app.css",
   "build/app.js": "/build/app.js",
+  "build/rive/bird.riv": "/build/rive/bird.91de94f2.riv",
+  "build/rive/pup.riv": "/build/rive/pup.b7a96e2b.riv",
   "build/images/gear-solid.svg": "/build/images/gear-solid.45ca6482.svg",
   "build/images/circle-question-solid.svg": "/build/images/circle-question-solid.ed2fb881.svg",
   "build/images/triangle-exclamation-solid.svg": "/build/images/triangle-exclamation-solid.b34836fe.svg",

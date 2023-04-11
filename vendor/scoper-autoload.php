@@ -6,8 +6,8 @@ $loader = require_once __DIR__.'/autoload.php';
 
 // Exposed classes. For more information see:
 // https://github.com/humbug/php-scoper/blob/master/docs/configuration.md#exposing-classes
-if (!class_exists('ComposerAutoloaderInita4b6a67cd0584eafc5f71543c67f62fb', false) && !interface_exists('ComposerAutoloaderInita4b6a67cd0584eafc5f71543c67f62fb', false) && !trait_exists('ComposerAutoloaderInita4b6a67cd0584eafc5f71543c67f62fb', false)) {
-    spl_autoload_call('_YabeAcssPurger\ComposerAutoloaderInita4b6a67cd0584eafc5f71543c67f62fb');
+if (!class_exists('ComposerAutoloaderInit06c08aee93c7c01271aeb27046ec1ae2', false) && !interface_exists('ComposerAutoloaderInit06c08aee93c7c01271aeb27046ec1ae2', false) && !trait_exists('ComposerAutoloaderInit06c08aee93c7c01271aeb27046ec1ae2', false)) {
+    spl_autoload_call('_YabeAcssPurger\ComposerAutoloaderInit06c08aee93c7c01271aeb27046ec1ae2');
 }
 
 return $loader;
