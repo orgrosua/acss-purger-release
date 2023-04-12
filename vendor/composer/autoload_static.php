@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit06c08aee93c7c01271aeb27046ec1ae2
+class ComposerStaticInit69188f2f1fbb8c43c6abe38c361b4581
 {
     public static $files = array (
         'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
@@ -29,7 +29,6 @@ class ComposerStaticInit06c08aee93c7c01271aeb27046ec1ae2
             '_YabeAcssPurger\\Symfony\\Component\\PropertyAccess\\' => 49,
             '_YabeAcssPurger\\Symfony\\Component\\Finder\\' => 41,
             '_YabeAcssPurger\\Sabberworm\\CSS\\' => 31,
-            '_YabeAcssPurger\\EDD_SL\\' => 23,
         ),
         'Y' => 
         array (
@@ -78,10 +77,6 @@ class ComposerStaticInit06c08aee93c7c01271aeb27046ec1ae2
         array (
             0 => __DIR__ . '/..' . '/sabberworm/php-css-parser/src',
         ),
-        '_YabeAcssPurger\\EDD_SL\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/rosua/edd-sl-plugin-updater/src',
-        ),
         'Yabe\\AcssPurger\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
@@ -95,7 +90,6 @@ class ComposerStaticInit06c08aee93c7c01271aeb27046ec1ae2
         'Yabe\\AcssPurger\\Api\\ApiInterface' => __DIR__ . '/../..' . '/src/Api/ApiInterface.php',
         'Yabe\\AcssPurger\\Api\\Router' => __DIR__ . '/../..' . '/src/Api/Router.php',
         'Yabe\\AcssPurger\\Api\\Setting\\Cache' => __DIR__ . '/../..' . '/src/Api/Setting/Cache.php',
-        'Yabe\\AcssPurger\\Api\\Setting\\License' => __DIR__ . '/../..' . '/src/Api/Setting/License.php',
         'Yabe\\AcssPurger\\Api\\Setting\\Option' => __DIR__ . '/../..' . '/src/Api/Setting/Option.php',
         'Yabe\\AcssPurger\\Builder\\Bricks' => __DIR__ . '/../..' . '/src/Builder/Bricks.php',
         'Yabe\\AcssPurger\\Builder\\Oxygen' => __DIR__ . '/../..' . '/src/Builder/Oxygen.php',
@@ -107,8 +101,6 @@ class ComposerStaticInit06c08aee93c7c01271aeb27046ec1ae2
         'Yabe\\AcssPurger\\Utils\\Config' => __DIR__ . '/../..' . '/src/Utils/Config.php',
         'Yabe\\AcssPurger\\Utils\\Notice' => __DIR__ . '/../..' . '/src/Utils/Notice.php',
         '_YabeAcssPurger\\Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
-        '_YabeAcssPurger\\EDD_SL\\EDD_SL_Plugin_Updater' => __DIR__ . '/..' . '/rosua/edd-sl-plugin-updater/src/EDD_SL_Plugin_Updater.php',
-        '_YabeAcssPurger\\EDD_SL\\PluginUpdater' => __DIR__ . '/..' . '/rosua/edd-sl-plugin-updater/src/PluginUpdater.php',
         '_YabeAcssPurger\\Normalizer' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/Resources/stubs/Normalizer.php',
         '_YabeAcssPurger\\PhpToken' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/PhpToken.php',
         '_YabeAcssPurger\\Sabberworm\\CSS\\CSSList\\AtRuleBlockList' => __DIR__ . '/..' . '/sabberworm/php-css-parser/src/CSSList/AtRuleBlockList.php',
@@ -245,9 +237,9 @@ class ComposerStaticInit06c08aee93c7c01271aeb27046ec1ae2
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit06c08aee93c7c01271aeb27046ec1ae2::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit06c08aee93c7c01271aeb27046ec1ae2::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit06c08aee93c7c01271aeb27046ec1ae2::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit69188f2f1fbb8c43c6abe38c361b4581::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit69188f2f1fbb8c43c6abe38c361b4581::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit69188f2f1fbb8c43c6abe38c361b4581::$classMap;
 
         }, null, ClassLoader::class);
     }

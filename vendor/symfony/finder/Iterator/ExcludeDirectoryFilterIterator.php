@@ -16,6 +16,7 @@ namespace _YabeAcssPurger\Symfony\Component\Finder\Iterator;
  * @author Fabien Potencier <fabien@symfony.com>
  *
  * @extends \FilterIterator<string, \SplFileInfo>
+ *
  * @implements \RecursiveIterator<string, \SplFileInfo>
  */
 class ExcludeDirectoryFilterIterator extends \FilterIterator implements \RecursiveIterator

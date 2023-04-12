@@ -7,7 +7,7 @@
  * Plugin Name:         ACSS Purger
  * Plugin URI:          https://acss-purger.yabe.land
  * Description:         Purge Automatic.css CSS file
- * Version:             1.0.4
+ * Version:             1.0.5
  * Requires at least:   6.0
  * Requires PHP:        7.4
  * Author:              Rosua
@@ -28,7 +28,6 @@ namespace _YabeAcssPurger;
  * Namespace or prefix of the Package's on the wp_options table.
  */
 \define('ACSS_PURGER_OPTION_NAMESPACE', 'acss_purger');
-\define('ACSS_PURGER_EDD_STORE', ['url' => 'https://rosua.org', 'item_id' => 238, 'author' => 'idrosua']);
 \define('ACSS_PURGER_REST_NAMESPACE', 'acss-purger/v1');
 if (\file_exists(__DIR__ . '/vendor/scoper-autoload.php')) {
     require_once __DIR__ . '/vendor/scoper-autoload.php';

@@ -10,6 +10,7 @@
  */
 namespace _YabeAcssPurger\Symfony\Component\PropertyInfo\Extractor;
 
+use _YabeAcssPurger\phpDocumentor\Reflection\Types\ContextFactory;
 use _YabeAcssPurger\PHPStan\PhpDocParser\Ast\PhpDoc\InvalidTagValueNode;
 use _YabeAcssPurger\PHPStan\PhpDocParser\Ast\PhpDoc\ParamTagValueNode;
 use _YabeAcssPurger\PHPStan\PhpDocParser\Ast\PhpDoc\PhpDocNode;
@@ -52,6 +53,12 @@ final class PhpStanExtractor implements PropertyTypeExtractorInterface, Construc
      */
     public function __construct(array $mutatorPrefixes = null, array $accessorPrefixes = null, array $arrayMutatorPrefixes = null)
     {
+        if (!\class_exists(ContextFactory::class)) {
+            throw new \LogicException(\sprintf('Unable to use the "%s" class as the "phpdocumentor/type-resolver" package is not installed. Try running composer require "phpdocumentor/type-resolver".', __CLASS__));
+        }
+        if (!\class_exists(PhpDocParser::class)) {
+            throw new \LogicException(\sprintf('Unable to use the "%s" class as the "phpstan/phpdoc-parser" package is not installed. Try running composer require "phpstan/phpdoc-parser".', __CLASS__));
+        }
         $this->phpStanTypeHelper = new PhpStanTypeHelper();
         $this->mutatorPrefixes = $mutatorPrefixes ?? ReflectionExtractor::$defaultMutatorPrefixes;
         $this->accessorPrefixes = $accessorPrefixes ?? ReflectionExtractor::$defaultAccessorPrefixes;

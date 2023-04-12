@@ -11,7 +11,7 @@
         "extraction",
         "injection",
         "reflection",
-        "property path"
+        "property-path"
     ],
     "homepage": "https:\/\/symfony.com",
     "license": "MIT",

@@ -16,6 +16,5 @@ return array(
     '_YabeAcssPurger\\Symfony\\Component\\PropertyAccess\\' => array($vendorDir . '/symfony/property-access'),
     '_YabeAcssPurger\\Symfony\\Component\\Finder\\' => array($vendorDir . '/symfony/finder'),
     '_YabeAcssPurger\\Sabberworm\\CSS\\' => array($vendorDir . '/sabberworm/php-css-parser/src'),
-    '_YabeAcssPurger\\EDD_SL\\' => array($vendorDir . '/rosua/edd-sl-plugin-updater/src'),
     'Yabe\\AcssPurger\\' => array($baseDir . '/src'),
 );
