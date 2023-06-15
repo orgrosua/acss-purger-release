@@ -105,6 +105,9 @@ class Cache
     }
     public function drop_cache()
     {
+        if (!\file_exists(self::get_cache_path())) {
+            return;
+        }
         $finder = new Finder();
         $finder->files()->in(self::get_cache_path())->name('*.css');
         foreach ($finder as $file) {
